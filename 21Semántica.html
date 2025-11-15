@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 Semántica</title>
+    <link rel="stylesheet" href="21semántica.css">
+</head>
+<body>
+    <header>
+        <h1>Mi sitio web</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/about">Acerca de </a>
+             <a href="/contact">Contacto</a>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <h2>Mi primera página con CSS</h2>
+        <p>Este es el contenido principal de la página</p>
+
+        <hr>
+
+        <section>
+            <h2>Servicios</h2>
+            <p>Descripción de servicios en una sección</p>
+        </section>
+        <hr>
+
+        <section>
+            <h2>Articulos</h2>
+
+            <article id="articulo1">
+                <h3>Titulo del artículo/notcia 1</h3>
+                <p>Contenido del articulo 1</p>
+                <p class="fecha">
+                    Publicado el <time datetime="2025-11-04">04 de noviembre de 2025</time>
+                </p>
+            </article>
+        </section>
+
+        <hr>
+        <section>
+            <h2>Imagen de una playa </h2>
+            <figure>
+                <img src="playa.jpg" alt="imagen de una playa" style="width: 25%;">
+                <figcaption>Imagen de una playa </figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!--Detalles-->
+        <details>
+            <sumary>Ver más detalles sobre el producto</sumary>
+            <p>Este producto esta hecho con materiales ecologicos y tiene una garantia de 2 años</p>
+        </details>
+
+        <hr>
+    </main>
+
+    <!--Contenido complementario-->
+    <aside>
+        <h3>Articulos relacionados</h3>
+        <ul>
+            <li><a href="#articulo1">Articulo 1</a></li>
+             <li><a href="#articulo2">Articulo 2</a></li>
+        </ul>
+    </aside>
+
+    <hr>
+
+
+    <footer>
+        <p> © 2025 MI sitio web. Todos los derechos reservados</p>
+        <a href="privacy.html">Politica de privacidad</a>
+        <p id="demo"></p>
+        
+    </footer>
+
+    <script src="21semántica.js" defer></script>
+</body>
+</html>
