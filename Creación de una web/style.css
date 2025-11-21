@@ -1,0 +1,210 @@
+/* --------- Base y paleta --------- */
+:root{
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --ink: #222222;
+  --muted: #5a5a5a;
+  --primary: #2b7de9;   /* azul moderado */
+  --primary-weak: #e8f0fe;
+  --border: #dddddd;
+  --accent: #ef8f2f;    /* toque cálido */
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* --------- Layout global --------- */
+header, main, footer{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1{ font-size: 1.8rem; margin: 0 0 .25rem; }
+h2{ font-size: 1.3rem; margin: 0 0 .5rem; color: var(--muted); }
+h3{ font-size: 1.1rem; margin: .25rem 0; }
+p{ margin: .5rem 0; }
+
+/* Bloques */
+section, aside{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* --------- Navegación --------- */
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+  margin: .75rem 0 0;
+}
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary);
+  background: var(--primary-weak);
+  border: 1px solid #cfe0ff;
+  padding: .35rem .6rem;
+  border-radius: .4rem;
+  transition: background .15s ease, color .15s ease;
+}
+nav a:hover, nav a:focus{
+  background: #dbe7ff;
+  outline: 2px solid #cfe0ff;
+  outline-offset: 2px;
+}
+
+/* --------- Próxima reunión --------- */
+figure{
+  margin: 0 0 .75rem;
+}
+figure img{
+  max-width: 180px;
+  height: auto;
+  border-radius: .4rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+}
+figcaption{
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: .25rem;
+}
+
+/* --------- Lista general --------- */
+ul{ padding-left: 1.25rem; }
+li{ margin: .3rem 0; }
+
+/* --------- Tabla calendario --------- */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+caption{
+  text-align: left;
+  font-weight: 600;
+  padding: .6rem .75rem;
+  color: var(--muted);
+}
+thead th{
+  background: #f5f7fb;
+  color: #3f3f3f;
+  text-align: left;
+  padding: .6rem .75rem;
+  border-bottom: 2px solid var(--border);
+}
+tbody td{
+  padding: .6rem .75rem;
+  border-top: 1px solid var(--border);
+}
+tbody tr:nth-child(even){
+  background: #fcfdff;
+}
+tbody tr:hover{
+  background: #f0f6ff;
+}
+
+/* --------- Formulario --------- */
+#formulario form{
+  display: grid;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+fieldset{
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .75rem;
+}
+legend{
+  font-weight: 600;
+  padding: 0 .25rem;
+  color: var(--ink);
+}
+
+label{
+  display: block;
+  font-weight: 600;
+  margin-top: .5rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea{
+  width: 100%;
+  padding: .55rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: .4rem;
+  background: #fff;
+  font: inherit;
+  color: var(--ink);
+  margin-top: .25rem;
+}
+textarea{ min-height: 120px; }
+
+input[type="radio"],
+input[type="checkbox"]{
+  margin-right: .35rem;
+}
+
+input:focus, select:focus, textarea:focus{
+  outline: 3px solid #cfe0ff;
+  border-color: var(--primary);
+}
+
+button{
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  padding: .6rem .9rem;
+  border-radius: .4rem;
+  font-weight: 600;
+}
+button:hover, button:focus{
+  background: #1f6fd2;
+  border-color: #1f6fd2;
+}
+
+/* --------- Aside normas y tips --------- */
+#normas h2, #tips h2{
+  color: var(--ink);
+}
+#tips ul{ list-style: square; }
+
+/* --------- Footer --------- */
+footer{
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  padding: 1rem;
+}
+footer p{ margin: .3rem 0; }
+footer nav ul{ gap: .4rem; }
+
+/* --------- Responsivo --------- */
+@media (max-width: 640px){
+  nav ul{ gap: .4rem; }
+  figure img{ max-width: 100%; }
+}
+
+/* --------- Accesibilidad extra --------- */
+:focus-visible{ outline: 3px solid #ffcc66; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce){
+  *{ transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}

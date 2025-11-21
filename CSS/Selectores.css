@@ -1,0 +1,23 @@
+h1 {
+    color:darkmagenta;
+    text-align:center;
+}
+p {
+    font-size: 18px;
+    color:gray;
+}
+.texto {
+    color:red;
+}
+
+#titulo{
+    font-size: 30px;
+}
+
+div p {
+    color:blue;
+}
+
+a:hover {
+    color:green;
+}
