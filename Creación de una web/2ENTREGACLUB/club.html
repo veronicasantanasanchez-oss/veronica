@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club de Lectura Comunitario</title>
+    <link rel="stylesheet" href="club.css">
+</head>
+
+<body id="top">
+
+<!-- GRID PRINCIPAL -->
+<div class="grid-container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Bienvenida al club de lectura comunitario</h1>
+        <h2 class="lema">Pensamos juntos, leemos mejor</h2>
+    </header>
+
+    <!-- MENÚ -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="#proxima">Próxima reunión</a></li>
+            <li><a href="#reseñas">Reseñas</a></li>
+            <li><a href="#próximos eventos">Próximos eventos</a></li>
+            <li><a href="#formulario">Inscripción</a></li>
+            <li><a href="#normas">Normas</a></li>
+            <li><a href="#privacidad">Privacidad</a></li>
+            <li><a href="#tips">Tips</a></li>
+        </ul>
+    </nav>
+
+    <!-- ASIDE IZQUIERDO -->
+    <aside id="normas">
+        <h2>Normas de convivencia</h2>
+        <ul>
+            <li>Respeto en las intervenciones</li>
+            <li>Participación activa</li>
+            <li>Traer el libro leído</li>
+            <li>Silencio durante la lectura compartida</li>
+            <li>Evaluación periódica</li>
+        </ul>
+        <img src="normas.png" alt="Normas del club">
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRÓXIMA REUNIÓN -->
+        <section id="proxima">
+            <h2>Próxima reunión</h2>
+
+            <table>
+                <tr><td>Libro del mes: La Odisea</td></tr>
+                <tr><td>Lugar: Sede Vecinal Guanarteme</td></tr>
+                <tr><td>Sala 1</td></tr>
+            </table>
+        </section>
+
+        <!-- TRES COLUMNAS -->
+        <section class="contenedor-columnas">
+
+            <div class="columna">
+                <h3>Debate sobre el libro</h3>
+                <p>Margot parece tenerlo todo: éxito, dinero y una boda en camino...</p>
+                <img src="librodelmes.jpg" alt="Portada de Un cuento perfecto" class="portada">
+            </div>
+
+            <div class="columna">
+                <h3>Propuestas de próximos títulos</h3>
+
+                <div class="fila-libros">
+                    <div class="libro">
+                        <img src="odisea.jpg" alt="Portada de La Odisea">
+                        <p>La Odisea – Homero</p>
+                    </div>
+
+                    <div class="libro">
+                        <img src="siempre.jpg" alt="Portada de Siempre">
+                        <p>Siempre – Defreds</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columna">
+                <h3>Reseñas</h3>
+                <p>“Un cuento perfecto” es una historia que conecta por su honestidad emocional...</p>
+                <p>“La Odisea” sigue siendo una obra maestra de la literatura clásica...</p>
+            </div>
+
+        </section>
+
+        <!-- TABLA CALENDARIO -->
+        <section id="próximos eventos">
+            
+            <table>
+                <caption>Próximos eventos</caption>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Libro</th>
+                        <th>Autor</th>
+                        <th>Lugar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>05/12/2025</td><td>La Odisea</td><td>Homero</td><td>Sede Vecinal Guanarteme</td></tr>
+                    <tr><td>19/12/2025</td><td>1984</td><td>George Orwell</td><td>Sede Vecinal Guanarteme</td></tr>
+                    <tr><td>09/01/2026</td><td>Cien años de soledad</td><td>Gabriel García Márquez</td><td>Biblioteca Central</td></tr>
+                    <tr><td>06/02/2026</td><td>El Principito</td><td>Saint-Exupéry</td><td>Centro Cultural La Isleta</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="formulario">
+            <h2>Inscripción</h2>
+
+            <form action="https://webhook.site/909eead6-1f6f-4333-94c9-ff6ad75a2741" method="post">
+
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+
+                    <label for="genero">Género literario preferido:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Seleccione...</option>
+                        <option>Novela</option>
+                        <option>Poesía</option>
+                        <option>Ensayo</option>
+                    </select>
+
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios"></textarea>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- PRIVACIDAD -->
+        <section id="privacidad">
+            <h2>Política de privacidad</h2>
+            <p>El Club de Lectura Comunitario de Guanarteme se compromete a proteger la privacidad...</p>
+        </section>
+
+    </main>
+
+    <!-- ASIDE DERECHO -->
+    <aside id="tips">
+        <h2>Tips para disfrutar del Club de Lectura</h2>
+        <ul>
+            <li>Redescubre tu lectura favorita</li>
+            <li>Montar nuestro campamento lector</li>
+            <li>Lleva siempre tu ejemplar del libro</li>
+            <li>Subraya frases que te impacten</li>
+            <li>Escucha con atención</li>
+            <li>No tengas miedo de opinar</li>
+            <li>Respeta los turnos</li>
+            <li>Comparte tus impresiones</li>
+            <li>Trae agua o café</li>
+            <li>Propón nuevos títulos</li>
+            <li>Apoya a quien lo necesite</li>
+            <li>Disfruta del encuentro</li>
+        </ul>
+        <img src="lectura.jpg" alt="Tips de lectura">
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Redes sociales</p>
+        <lu>
+            <li><a href="https://www.bibliotecadecanarias.org/las-palmas/clubes-de-lectura" target="_blank">WEB</a></li>
+            <li><a href="https://share.google/UBjR7tnmYZDXMUdWR" target="_blank">Facebook</a></li>
+    </lu>
+
+        <p>&copy; 2025 Club de Lectura Comunitario</p>
+        <p><a href="#top">Volver arriba</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>
+
+
+
