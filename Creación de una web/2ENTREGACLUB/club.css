@@ -201,7 +201,7 @@ tbody tr:hover {
   border-radius: 6px;
 }
 
-/* ---------------- FORMULARIO ---------------- */
+/* FORMULARIO */
 form {
   display: grid;
   gap: 1rem;
@@ -262,6 +262,28 @@ button:hover {
   text-align: center;
   border-radius: 10px;
 }
+/*  CARRUSEL  */
+
+#carrusel {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.carrusel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  scroll-behavior: smooth;
+}
+
+
 
 /*  RESPONSIVE */
 @media (max-width: 900px) {
@@ -274,5 +296,96 @@ button:hover {
       "aside-left"
       "aside-right"
       "footer";
+  }
+}
+
+/*  MÓVIL */
+@media (max-width: 600px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside-left"
+      "aside-right"
+      "footer";
+  }
+
+  body {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .menu li a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .columna {
+    min-width: 100%;
+  }
+
+  .columna img,
+  #normas img,
+  #tips img {
+    width: 150px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .carrusel-item {
+    min-width: 200px;
+  }
+}
+/* TABLET */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "aside-left aside-right"
+      "footer footer";
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .columna {
+    min-width: 45%;
+  }
+
+  .carrusel-item {
+    min-width: 240px;
+  }
+}
+
+/*  ESCRITORIO  */
+@media (min-width: 900px) {
+  .grid-container {
+    max-width: 1200px;
+  }
+
+  .columna img {
+    width: 200px;
   }
 }
